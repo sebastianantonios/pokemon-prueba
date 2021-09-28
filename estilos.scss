@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+div#mostrarPokemon {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#mostrarPokemon button {
+    width: 20%; 
+    text-align: center;
+}
+
+#modal-pokemon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0, .8);
+    z-index: 999;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    flex-wrap: wrap;
+    #cerrar-modal{
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .modal-contenedor{
+        background: #fff;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        .data-pokemon{
+            display: flex;              
+            .picture{
+                width: 40%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                } 
+            }
+            .informacion-pokemon{
+                width: 60%;                
+                h2{
+                    font: 600 23px/23px 'Roboto Slab', serif;
+                    text-transform: capitalize;
+                    margin-bottom: 10px;
+                }
+                .numerico-info{
+                    display: inline-block;
+                    margin: 20px 0;
+                    .row{
+                        display: flex;
+                        max-width: 300px;
+                        &:nth-child(even){
+                            background: silver
+                        }
+                        &:nth-child(odd){
+                            background: gray
+                        }
+                        .column-left{
+                            width: 40%;
+                        }
+                        .column-right{
+                            width: 60%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }    
+}
+
